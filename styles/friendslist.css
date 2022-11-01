@@ -17,15 +17,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 20px;
     gap: 14px;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
-    width: 714px;
-    height: 634px;
+    width: calc(100% - 726px);
+    height: calc(100vh - 390px);
+    padding-top: 20px;
+    transition: all 1s ease;
 }
 
-.friendslist__centercontainer>span {
+.friendslist__title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 0px;
+    gap: 10px;
+}
+
+.friendslist__title>span {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -41,8 +50,7 @@ body {
     gap: 14px;
     overflow-y: auto;
     width: 100%;
-    padding-right: 40px;
-    padding-left: 40px;
+    padding: 0px 40px 20px;
     box-sizing: border-box;
 }
 
@@ -70,6 +78,10 @@ body {
     height: 60px;
 }
 
+.friendslist__card>div>div {
+    position: relative;
+}
+
 .friendslist__ellipse {
     box-sizing: border-box;
     width: 12px;
@@ -81,10 +93,6 @@ body {
     border: 2px solid #FFFFFF;
     border-radius: 10px;
     float: inline-start;
-}
-
-.friendslist__card>div>div {
-    position: relative;
 }
 
 .friendslist__elementsgrouping {
@@ -105,6 +113,7 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: #000000;
+    word-break: break-word;
 }
 
 .friendslist__elementsgrouping div {
@@ -122,6 +131,7 @@ body {
     display: flex;
     align-items: center;
     color: #B1B9DB;
+    word-break: break-word;
 }
 
 .friendslist__button {
@@ -195,4 +205,49 @@ body {
 
     background: rgba(177, 185, 219, 0.3);
     border-radius: 8px;
+}
+
+@media screen and (max-width : 767px) {
+
+    .friendslist__centercontainer {
+        width: calc(100% - 16px);
+    }
+
+    .friendslist__card {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .friendslist__card>div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .friendslist__elementsgrouping {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0px 16px;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .friendslist__centercontainer {
+        width: calc(100% - 272px);
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .friendslist__centercontainer {
+        width: calc(100% - 440px);
+    }
+}
+
+@media screen and (min-width: 1439px) and (max-width: 1920px) {
+    .friendslist__centercontainer {
+        width: calc(100% - 726px);
+    }
 }

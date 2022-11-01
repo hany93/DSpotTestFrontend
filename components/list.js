@@ -1,18 +1,20 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 const List = () => {
+    const router = useRouter();
     const data = [
         {
             id: Math.random(),
             image: 'images/avatar.png',
-            name: 'Steps Walters',
-            description: 'At Work'
+            name: 'Haniyessi Rodriguez Hernandez',
+            description: 'Take a look around you, everything is awesome'
         },
         {
             id: Math.random(),
             image: 'images/avatar.png',
             name: 'Steps Walters',
-            description: 'At Work'
+            description: '"Developing something amazing'
         },
         {
             id: Math.random(),
@@ -254,7 +256,10 @@ const List = () => {
             name: 'Steps Walters',
             description: 'At Work'
         }
-    ]
+    ]  
+    const goDetails = () => {
+        router.push("/friends_details_info");
+    }
     return (
         <div className="friendslist__list">
             {data.map((item) => {
@@ -272,7 +277,7 @@ const List = () => {
                                 </div>
                             </div>
                         </div>
-                        <button className="friendslist__button">Details</button>
+                        <button onClick={() => goDetails()} className="friendslist__button">Details</button>
                     </div>
                 )
             })}

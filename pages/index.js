@@ -1,4 +1,4 @@
-import FriendsList from "./friendslist"
+import FriendsList from "./friends_list"
 export default function Home() {
   return (
     <>
