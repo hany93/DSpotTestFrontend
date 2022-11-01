@@ -1,7 +1,9 @@
 .friends_details_info {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
+    position: relative;
     gap: 80px;
     width: 100%;
     height: 100vh;
@@ -17,6 +19,7 @@
     height: 44px;
     background: #FFFFFF;
     border-radius: 8px;
+    position: absolute;
 }
 
 .friends_details_info__content {
