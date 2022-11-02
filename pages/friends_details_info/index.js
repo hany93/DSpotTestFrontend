@@ -21,11 +21,11 @@ const FriendsList = () => {
                         </div>
                     </div>
                 </div>
+                <ul>
+                    <li id="info"><a href='#'>Info</a></li>
+                    <li id="photos"><a href='#'>Photos</a></li>
+                </ul>
                 <div className="friends_details_info__card">
-                    <ul>
-                        <li id="info"><a href='#'>Info</a></li>
-                        <li id="photos"><a href='#'>Photos</a></li>
-                    </ul>
                 </div>
             </div>
         </section>
