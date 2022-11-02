@@ -8,21 +8,24 @@ const FriendsList = () => {
                     <img src="images/arrow_back.png" />
                 </div>
             </div>
-            <div className="friends_details_info__content">
+            <div className="friends_details_info__centercontainer">
                 <div>
                     <div>
-                        <img src="images/avatar.png" className="friends_details_info__image" />
+                        <img src="images/avatar__150.png" className="friends_details_info__image" />
                         <span className="friends_details_info__ellipse" />
                     </div>
                     <div className="friends_details_info__elementsgrouping">
-                        <span>dgdfgf</span>
+                        <span>Steph Walters</span>
                         <div>
-                            <span>serseres</span>
+                            <span>At Work</span>
                         </div>
                     </div>
                 </div>
-                <div>
-
+                <div className="friends_details_info__card">
+                    <ul>
+                        <li id="info"><a href='#'>Info</a></li>
+                        <li id="photos"><a href='#'>Photos</a></li>
+                    </ul>
                 </div>
             </div>
         </section>
