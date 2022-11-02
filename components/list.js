@@ -267,7 +267,7 @@ const List = () => {
                     <div key={item.id} className="friendslist__card">
                         <div>
                             <div>
-                                <img src={item.image} className="friendslist__image" />
+                                <img src={item.image} />
                                 <span className="friendslist__ellipse" />
                             </div>
                             <div className="friendslist__elementsgrouping">
