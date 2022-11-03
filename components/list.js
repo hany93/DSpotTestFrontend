@@ -258,7 +258,7 @@ const List = () => {
         }
     ]  
     const goDetails = () => {
-        router.push("/friends_details_info");
+        router.push("/friends_details_photos");
     }
     return (
         <div className="friendslist__list">

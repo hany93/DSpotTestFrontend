@@ -1,4 +1,6 @@
-.friends_details_info {
+/*CSS for Friends Details Pages*/
+
+.friends_details {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -8,7 +10,7 @@
     height: 100vh;
 }
 
-.friends_details_info__back {
+.friends_details__back {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,13 +20,14 @@
     height: 44px;
     background: #FFFFFF;
     border-radius: 8px;
+    cursor: pointer;
 }
 
-.friends_details_info>div {
+.friends_details>div {
     height: calc(100vh - 120px);
 }
 
-.friends_details_info__centercontainer {
+.friends_details__centercontainer {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -34,21 +37,21 @@
     transition: all 1s ease;
 }
 
-.friends_details_info__centercontainer img {
+.friends_details__image {
     border-radius: 4px;
     width: 150px;
     height: 150px;
 }
 
-.friends_details_info__infoavatar {
+.friends_details__infoavatar {
     margin: 60px 60px 0px;
 }
 
-.friends_details_info__infoavatar>div {
+.friends_details__infoavatar>div {
     position: relative;
 }
 
-.friends_details_info__ellipse {
+.friends_details__ellipse {
     box-sizing: border-box;
     width: 23px;
     height: 23px;
@@ -60,7 +63,7 @@
     border-radius: 15px;
 }
 
-.friends_details_info__elementsgrouping {
+.friends_details__elementsgrouping {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -69,7 +72,7 @@
     margin-top: 23px;
 }
 
-.friends_details_info__elementsgrouping>span {
+.friends_details__elementsgrouping>span {
     font-size: 26px;
     line-height: 31px;
     display: flex;
@@ -81,13 +84,13 @@
     word-break: break-word;
 }
 
-.friends_details_info__elementsgrouping div {
+.friends_details__elementsgrouping div {
     border: 1px solid #B1B9DB;
     border-radius: 20px;
     padding: 0px 8px;
 }
 
-.friends_details_info__elementsgrouping div>span {
+.friends_details__elementsgrouping div>span {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -99,7 +102,7 @@
     word-break: break-word;
 }
 
-.friends_details_info__centercontainer ul {
+.friends_details__centercontainer ul {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -108,7 +111,7 @@
     margin: 0px;
 }
 
-.friends_details_info__centercontainer ul li {
+.friends_details__centercontainer ul li {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,7 +121,7 @@
     list-style-type: none;
 }
 
-.friends_details_info__centercontainer ul li>a {
+.friends_details__centercontainer ul li>a {
     text-decoration: none;
     font-family: 'Inter';
     font-style: normal;
@@ -128,19 +131,21 @@
     color: #000000;
 }
 
-.friends_details_info__centercontainer ul li:first-child {
+.friends_details__centercontainer ul li:first-child {
     border-bottom-color: #000000;
     border-bottom-style: solid;
     border-bottom-width: 3px;
 }
 
-.friends_details_info__tab {
+.friends_details__tab {
     display: flex;
     flex-direction: column;
     padding: 0px;
     gap: 10px;
     margin: 0px 60px 60px;
 }
+
+/*Page Friends Details Info*/
 
 .friends_details_info__card {
     display: flex;
@@ -171,31 +176,94 @@
     color: #000000;
 }
 
-.friends_details_info__card__line{
+.friends_details_info__card__line {
     width: 100%;
     border: 1px solid rgba(177, 185, 219, 0.5);
 }
 
-.friends_details_info__card>div:nth-child(2n+1){
+.friends_details_info__card>div:nth-child(2n+1) {
     display: flex;
     flex-direction: row;
 }
 
-.friends_details_info__card>div:nth-child(2n){
+.friends_details_info__card>div:nth-child(2n) {
     display: flex;
     flex-direction: row;
 }
 
-.friends_details_info__card>div>span{
+.friends_details_info__card>div>span {
     width: 50%;
 }
 
-.friends_details_info__card>div:first-child>span{
+.friends_details_info__card>div:first-child>span {
     width: 100%;
     text-align: justify;
 }
 
 .friends_details_info__card>div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+}
+
+/*Page Friends Details Photos*/
+
+.friends_details_photos__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 28px;
+    gap: 28px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(204, 208, 223, 0.5);
+    border-radius: 8px;
+}
+
+.friends_details_photos__card__label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #B1B9DB;
+}
+
+.friends_details_photos__card__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.friends_details_photos__card__line {
+    width: 100%;
+    border: 1px solid rgba(177, 185, 219, 0.5);
+}
+
+.friends_details_photos__card>div:nth-child(2n+1) {
+    display: flex;
+    flex-direction: row;
+}
+
+.friends_details_photos__card>div:nth-child(2n) {
+    display: flex;
+    flex-direction: row;
+}
+
+.friends_details_photos__card>div>span {
+    width: 50%;
+}
+
+.friends_details_photos__card>div:first-child>span {
+    width: 100%;
+    text-align: justify;
+}
+
+.friends_details_photos__card>div:nth-child(1) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
