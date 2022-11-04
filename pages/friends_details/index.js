@@ -34,7 +34,7 @@ const FriendsDetailsInfo = () => {
         // Get the modal
         let modal = document.getElementById("myModal");
 
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        // Get the image and insert it inside the modal
         let modalImg = document.getElementById("img01");
         modal.style.display = "flex";
         modalImg.src = image;
