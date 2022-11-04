@@ -23,7 +23,11 @@
     cursor: pointer;
 }
 
-.friends_details>div {
+.friends_details>div:nth-child(1) {
+    height: calc(100vh - 120px);
+}
+
+.friends_details>div:nth-child(2) {
     height: calc(100vh - 120px);
 }
 
@@ -131,12 +135,6 @@
     color: #000000;
 }
 
-.friends_details__centercontainer ul li:first-child {
-    border-bottom-color: #000000;
-    border-bottom-style: solid;
-    border-bottom-width: 3px;
-}
-
 .friends_details__tab {
     display: flex;
     flex-direction: column;
@@ -146,6 +144,12 @@
 }
 
 /*Page Friends Details Info*/
+
+.friends_details__centercontainer ul li:first-child {
+    border-bottom-color: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+}
 
 .friends_details_info__card {
     display: flex;
@@ -211,11 +215,15 @@
 /*Page Friends Details Photos*/
 
 .friends_details_photos__card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 28px;
-    gap: 28px;
+    display: none;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 136px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 20px;
+    gap: 20px;
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(204, 208, 223, 0.5);
     border-radius: 8px;
@@ -269,4 +277,106 @@
     align-items: flex-start;
     padding: 0px;
     gap: 10px;
+}
+
+.friends_details__imagecard {
+    border-radius: 4px;
+    width: 136px;
+    height: 136px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.friends_details__imagecard:hover {
+    opacity: 0.7;
+}
+
+/*Modal*/
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    width: 100%;
+    /* Full width */
+    height: 100vh;
+    /* Full height */
+    background-color: rgb(55, 62, 90);
+    /* Fallback color */
+    background-color: rgba(55, 62, 90, 0.9);
+    /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    filter: drop-shadow(0px 30px 60px rgba(0, 0, 0, 0.3));
+    border-radius: 4px;
+    width: calc(100% - 456px);
+    height: calc(100vh - 368px);
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.close>img{
+    width: 11px;
+    height: 11px;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 768px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+    .modal-content {
+        width: calc(100% - 950px);
+    }
 }
