@@ -24,11 +24,11 @@
 }
 
 .friends_details>div:nth-child(1) {
-    height: calc(100vh - 120px);
+    height: 904px;
 }
 
 .friends_details>div:nth-child(2) {
-    height: calc(100vh - 120px);
+    height: 904px;
 }
 
 .friends_details__centercontainer {
@@ -37,7 +37,7 @@
     gap: 30px;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
-    width: calc(100% - 832px);
+    width: 608px;
     transition: all 1s ease;
 }
 
@@ -166,7 +166,42 @@
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(204, 208, 223, 0.5);
     border-radius: 8px;
-    transition: all 1s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 493px;
+    height: 488px;
+}
+
+.friends_details_info__card::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.friends_details_info__card::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+
+.friends_details_info__card::-webkit-scrollbar-button:increment,
+.friends_details_info__card::-webkit-scrollbar-button {
+    display: none;
+}
+
+.friends_details_info__card::-webkit-scrollbar-thumb {
+    position: absolute;
+    width: 5px;
+    height: 46px;
+
+    background: #B1B9DB;
+    border-radius: 8px;
+}
+
+.friends_details_info__card::-webkit-scrollbar-track {
+    position: absolute;
+    width: 5px;
+    height: 552px;
+
+    background: rgba(177, 185, 219, 0.3);
+    border-radius: 8px;
 }
 
 .friends_details_info__card__label {
@@ -185,6 +220,7 @@
     font-size: 16px;
     line-height: 24px;
     color: #000000;
+    word-break: break-word;
 }
 
 .friends_details_info__card__line {
@@ -224,17 +260,50 @@
 .friends_details_photos__card {
     display: flex;
     align-items: flex-start;
+    justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-    flex-basis: 136px;
-    flex-grow: 1;
-    flex-shrink: 1;
     padding: 20px;
     gap: 20px;
     background: #FFFFFF;
-    box-shadow: 0px 10px 20px rgba(204, 208, 223, 0.5);
+    box-shadow: 0px 10px 20px rgb(204 208 223 / 50%);
     border-radius: 8px;
-    transition: all 1s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 493px;
+    height: 488px;
+}
+
+.friends_details_photos__card::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.friends_details_photos__card::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+
+.friends_details_photos__card::-webkit-scrollbar-button:increment,
+.friends_details_photos__card::-webkit-scrollbar-button {
+    display: none;
+}
+
+.friends_details_photos__card::-webkit-scrollbar-thumb {
+    position: absolute;
+    width: 5px;
+    height: 46px;
+
+    background: #B1B9DB;
+    border-radius: 8px;
+}
+
+.friends_details_photos__card::-webkit-scrollbar-track {
+    position: absolute;
+    width: 5px;
+    height: 552px;
+
+    background: rgba(177, 185, 219, 0.3);
+    border-radius: 8px;
 }
 
 .friends_details_photos__card__label {
@@ -288,11 +357,15 @@
 }
 
 .friends_details__imagecard {
-    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;  
+}
+
+.friends_details__imagecard>img{  
+    object-fit: cover;
     width: 136px;
     height: 136px;
-    cursor: pointer;
-    transition: 0.3s;
+    border-radius: 4px;
 }
 
 .friends_details__imagecard:hover {
@@ -327,8 +400,8 @@
     display: block;
     filter: drop-shadow(0px 30px 60px rgba(0, 0, 0, 0.3));
     border-radius: 4px;
-    width: calc(100% - 456px);
-    height: calc(100vh - 368px);
+    width: 985px;
+    height: 656px;
 }
 
 /* Add Animation - Zoom in the Modal */
@@ -366,8 +439,8 @@
 }
 
 .close>img{
-    width: 11px;
-    height: 11px;
+    width: 16px;
+    height: 16px;
 }
 
 .close:hover,
