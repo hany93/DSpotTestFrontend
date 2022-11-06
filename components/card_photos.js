@@ -7,15 +7,15 @@ const data = [
         name: 'Haniyessi Rodriguez Hernandez',
         description: 'Take a look around you, everything is awesome',
         photos: [
-            "images/a.png",
-            "images/a.png",
-            "images/a.png",
-            "images/a.png",
-            "images/a.png",
-            "images/a.png",
-            "images/a.png",
-            "images/a.png",
-            "images/a.png"
+            "images/imgCard1.png",
+            "images/imgCard2.png",
+            "images/imgCard3.png",
+            "images/imgCard4.png",
+            "images/imgCard5.png",
+            "images/imgCard6.png",
+            "images/imgCard7.png",
+            "images/imgCard8.png",
+            "images/imgCard9.png"
         ]
     }
 ];
