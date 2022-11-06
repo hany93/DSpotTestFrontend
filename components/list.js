@@ -258,26 +258,26 @@ const List = () => {
         }
     ]  
     const goDetails = () => {
-        router.push("/friends_details");
+        router.push("/profiles_details");
     }
     return (
-        <div className="friendslist__list">
+        <div className="profileslist__list">
             {data.map((item) => {
                 return (
-                    <div key={item.id} className="friendslist__card">
+                    <div key={item.id} className="profileslist__card">
                         <div>
                             <div>
                                 <img src={item.image} />
-                                <span className="friendslist__ellipse" />
+                                <span className="profileslist__ellipse" />
                             </div>
-                            <div className="friendslist__elementsgrouping">
+                            <div className="profileslist__elementsgrouping">
                                 <span>{item.name}</span>
                                 <div>
                                     <span>{item.description}</span>
                                 </div>
                             </div>
                         </div>
-                        <button onClick={() => goDetails()} className="friendslist__button">Details</button>
+                        <button onClick={() => goDetails()} className="profileslist__button">Details</button>
                     </div>
                 )
             })}

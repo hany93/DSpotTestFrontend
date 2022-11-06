@@ -1,11 +1,11 @@
 import React from "react";
 import List from '../../components/list'
 
-const FriendsList = () => {    
+const ProfileList = () => {    
     return (
-        <section className="friendslist">
-            <div className="friendslist__centercontainer">
-                <div className="friendslist__title">
+        <section className="profileslist">
+            <div className="profileslist__centercontainer">
+                <div className="profileslist__title">
                     <span>Friends</span>
                 </div>
                 <List />
@@ -14,4 +14,4 @@ const FriendsList = () => {
     );
 };
 
-export default FriendsList;
+export default ProfileList;
