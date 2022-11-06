@@ -62,21 +62,23 @@ const FriendsDetailsInfo = () => {
                         <span className="friends_details_info__card__text">(820) 289-1818</span>
                     </div>
                     <span className="friends_details_info__card__line" />
-                    <div>
-                        <span className="friends_details_info__card__label">Address:</span>
-                        <span className="friends_details_info__card__text">5190 Center Court Drive</span>
-                    </div>
-                    <div>
-                        <span className="friends_details_info__card__label">City:</span>
-                        <span className="friends_details_info__card__text">Spring</span>
-                    </div>
-                    <div>
-                        <span className="friends_details_info__card__label">State:</span>
-                        <span className="friends_details_info__card__text">TX</span>
-                    </div>
-                    <div>
-                        <span className="friends_details_info__card__label">Zipcode:</span>
-                        <span className="friends_details_info__card__text">77370</span>
+                    <div className="friends_details_info__card__basicInfo">
+                        <div>
+                            <span className="friends_details_info__card__label">Address:</span>
+                            <span className="friends_details_info__card__text">5190 Center Court Drive</span>
+                        </div>
+                        <div>
+                            <span className="friends_details_info__card__label">City:</span>
+                            <span className="friends_details_info__card__text">Spring</span>
+                        </div>
+                        <div>
+                            <span className="friends_details_info__card__label">State:</span>
+                            <span className="friends_details_info__card__text">TX</span>
+                        </div>
+                        <div>
+                            <span className="friends_details_info__card__label">Zipcode:</span>
+                            <span className="friends_details_info__card__text">77370</span>
+                        </div>
                     </div>
                 </div>);
             case 'Photos':
@@ -95,7 +97,7 @@ const FriendsDetailsInfo = () => {
         }
     }
     return (
-        <section className="friends_details">
+        <div className="friends_details">
             <div>
                 <div className="friends_details__back" onClick={() => goFriendList()}>
                     <img src="images/arrow_back.png" />
@@ -126,7 +128,7 @@ const FriendsDetailsInfo = () => {
                 <span className="close" onClick={() => closeModal()}><img src="images/close.png" /></span>
                 <img className="modal-content" id="img01" />
             </div>
-        </section>
+        </div>
     );
 };
 

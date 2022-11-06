@@ -37,7 +37,7 @@
     gap: 30px;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
-    width: 608px;
+    max-width: 608px;
     transition: all 1s ease;
 }
 
@@ -112,7 +112,7 @@
     align-items: flex-start;
     gap: 10px;
     padding: 0px;
-    margin: 0px;
+    margin: 0px 60px;
 }
 
 .friends_details__centercontainer ul li {
@@ -144,7 +144,7 @@
     border-bottom-color: #000000;
     border-bottom-style: solid;
     border-bottom-width: 3px;
-    color:#000000;
+    color: #000000;
 }
 
 .friends_details__tab {
@@ -152,7 +152,7 @@
     flex-direction: column;
     padding: 0px;
     gap: 10px;
-    margin: 0px 60px 60px;
+    overflow: hidden;
 }
 
 /*Card Friends Details Info*/
@@ -166,11 +166,15 @@
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(204, 208, 223, 0.5);
     border-radius: 8px;
-    overflow-y: auto;
-    overflow-x: hidden;
     box-sizing: border-box;
-    width: 493px;
-    height: 488px;
+    width: 488px;
+    height: 474px;
+    margin: 0px 60px 60px;
+}
+
+.friends_details_info__card p {
+    padding: 0px;
+    margin: 0px;
 }
 
 .friends_details_info__card::-webkit-scrollbar {
@@ -228,17 +232,21 @@
     border: 1px solid rgba(177, 185, 219, 0.5);
 }
 
-.friends_details_info__card>div:nth-child(2n+1) {
+.friends_details_info__card__basicInfo {
     display: flex;
-    flex-direction: row;
+    gap: 14px;
+    flex-direction: column;
 }
 
-.friends_details_info__card>div:nth-child(2n) {
+.friends_details_info__card__basicInfo>div {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
 }
 
-.friends_details_info__card>div>span {
+.friends_details_info__card__basicInfo>div>span {
     width: 50%;
 }
 
@@ -255,6 +263,18 @@
     gap: 10px;
 }
 
+.friends_details_info__card>div:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+}
+
+.friends_details_info__card>div>span {
+    width: 50%;
+}
+
 /*Card Friends Details Photos*/
 
 .friends_details_photos__card {
@@ -268,11 +288,10 @@
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgb(204 208 223 / 50%);
     border-radius: 8px;
-    overflow-y: auto;
-    overflow-x: hidden;
     box-sizing: border-box;
-    width: 493px;
+    width: 488px;
     height: 488px;
+    margin: 0px 60px 46px;
 }
 
 .friends_details_photos__card::-webkit-scrollbar {
@@ -306,62 +325,14 @@
     border-radius: 8px;
 }
 
-.friends_details_photos__card__label {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: #B1B9DB;
-}
-
-.friends_details_photos__card__text {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #000000;
-}
-
-.friends_details_photos__card__line {
-    width: 100%;
-    border: 1px solid rgba(177, 185, 219, 0.5);
-}
-
-.friends_details_photos__card>div:nth-child(2n+1) {
-    display: flex;
-    flex-direction: row;
-}
-
-.friends_details_photos__card>div:nth-child(2n) {
-    display: flex;
-    flex-direction: row;
-}
-
-.friends_details_photos__card>div>span {
-    width: 50%;
-}
-
-.friends_details_photos__card>div:first-child>span {
-    width: 100%;
-    text-align: justify;
-}
-
-.friends_details_photos__card>div:nth-child(1) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 10px;
-}
-
 .friends_details__imagecard {
     cursor: pointer;
-    transition: 0.3s;  
+    transition: 0.3s;
+    width: 136px;
+    height: 136px;
 }
 
-.friends_details__imagecard>img{  
+.friends_details__imagecard>img {
     object-fit: cover;
     width: 136px;
     height: 136px;
@@ -438,7 +409,7 @@
     transition: 0.3s;
 }
 
-.close>img{
+.close>img {
     width: 16px;
     height: 16px;
 }
@@ -449,15 +420,8 @@
     cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 768px) {
-    .modal-content {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
-    .modal-content {
-        width: calc(100% - 950px);
+@media only screen and (max-height : 1023px) {
+    .friends_details {
+        align-items: inherit;
     }
 }
