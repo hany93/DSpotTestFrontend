@@ -1,8 +1,10 @@
 import React from "react";
 import { useRouter } from "next/router";
+import ImageEllipseProfileList from "./image_ellipse_profile_list";
+import ElementsGroupingProfileList from "./elements_grouping_profile_list";
+import ButtonDetails from "./button_details";
 
 const List = () => {
-    const router = useRouter();
     const data = [
         {
             id: Math.random(),
@@ -256,28 +258,17 @@ const List = () => {
             name: 'Steps Walters',
             description: 'At Work'
         }
-    ]  
-    const goDetails = () => {
-        router.push("/profiles_details");
-    }
+    ];
     return (
         <div className="profileslist__list">
             {data.map((item) => {
                 return (
                     <div key={item.id} className="profileslist__card">
                         <div>
-                            <div>
-                                <img src={item.image} />
-                                <span className="profileslist__ellipse" />
-                            </div>
-                            <div className="profileslist__elementsgrouping">
-                                <span>{item.name}</span>
-                                <div>
-                                    <span>{item.description}</span>
-                                </div>
-                            </div>
+                            <ImageEllipseProfileList image={item.image} />
+                            <ElementsGroupingProfileList name={item.name} description={item.description} />
                         </div>
-                        <button onClick={() => goDetails()} className="profileslist__button">Details</button>
+                        <ButtonDetails />
                     </div>
                 )
             })}

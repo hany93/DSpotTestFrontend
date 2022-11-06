@@ -1,13 +1,12 @@
 import React from "react";
-import List from '../../components/list'
+import List from '../../components/list/list'
+import TitleProfileList from "../../components/title_profile_list";
 
-const ProfileList = () => {    
+const ProfileList = () => {
     return (
         <section className="profileslist">
             <div className="profileslist__centercontainer">
-                <div className="profileslist__title">
-                    <span>Friends</span>
-                </div>
+                <TitleProfileList />
                 <List />
             </div>
         </section>
