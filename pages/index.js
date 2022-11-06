@@ -1,8 +1,8 @@
-import FriendsList from "./profiles_list"
+import ProfilesList from "./profiles_list"
 export default function Home() {
   return (
     <>
-      <FriendsList/>
+      <ProfilesList/>
     </>
   )
 }
