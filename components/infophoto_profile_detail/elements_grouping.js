@@ -1,11 +1,11 @@
 import React from "react";
 
-const ElementsGrouping = () => {
+const ElementsGrouping = (props) => {
     return (
         <div className="profiles_details__elementsgrouping">
-            <span>Steph Walters</span>
+            <span>{props.profile.first_name + ' ' + props.profile.last_name}</span>
             <div>
-                <span>At Work</span>
+                <span>{props.profile.textStatus}</span>
             </div>
         </div>
     );

@@ -1,10 +1,13 @@
 import React from "react";
 import { useRouter } from "next/router";
 
-const ButtonDetails = () => {
+const ButtonDetails = (props) => {
     const router = useRouter(),
         goDetails = () => {
-            router.push("/profiles_details");
+            router.push({
+                pathname: '/profiles_details',
+                query: props.profile
+            }, '/profiles_details');
         };
     return (
         <button onClick={() => goDetails()} className="profileslist__button">Details</button>

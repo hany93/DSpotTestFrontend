@@ -1,10 +1,10 @@
 import React from "react";
 
-const ImageEllipse = () => {
+const ImageEllipse = (props) => {
     return (
         <div>
-            <img src="images/avatar__150.png" className="profiles_details__image" />
-            <span className="profiles_details__ellipse" />
+            <img src={props.profile.photo} className="profiles_details__image" />
+            <span className={props.profile.available ? "profiles_details__ellipse" : "profiles_details__ellipse_not_available"} />
         </div>
     );
 };

@@ -117,6 +117,19 @@ body {
     border-radius: 10px;
 }
 
+/*Status not available*/
+.profileslist__ellipse_not_available {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 10px;
+    top: 11px;
+    box-sizing: border-box;
+    background: #B1B9DB;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+}
+
 /***CSS for profile name and status description***/
 
 /*Container for the profile name and state description*/
@@ -368,6 +381,19 @@ body {
     left: -9px;
     top: -9px;
     background: #16BA44;
+    border: 4px solid #FFFFFF;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+/*Status not available*/
+.profiles_details__ellipse_not_available {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: -9px;
+    top: -9px;
+    background: #B1B9DB;
     border: 4px solid #FFFFFF;
     border-radius: 15px;
     box-sizing: border-box;
