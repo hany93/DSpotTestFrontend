@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
-import Images from "../../image";
-import arrow_back from '../../../public/images/arrow_back.png'
+import Images from "@components/image";
+import arrow_back from '@public/images/arrow_back.png'
 
 const ButtonBack = () => {
     const router = useRouter(),

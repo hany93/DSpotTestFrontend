@@ -1,7 +1,7 @@
-import ElementsGrouping from "../element_grouping";
-import ButtonDetails from "../button/button_details";
-import Ellipse from "../ellipse";
-import Images from "../image";
+import ElementsGrouping from "@components/element_grouping";
+import ButtonDetails from "@components/button/button_details";
+import Ellipse from "@components/ellipse";
+import Images from "@components/image";
 
 const ProfileList = ({ profiles }) => {
     return (

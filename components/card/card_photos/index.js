@@ -1,5 +1,5 @@
 import React from "react";
-import Images from "../../image";
+import Images from "@components/image";
 
 const CardPhotos = (props) => {
     return (

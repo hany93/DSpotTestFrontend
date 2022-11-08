@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import ElementsGrouping from "../element_grouping";
-import Images from "../image";
-import Ellipse from "../ellipse";
-import Tabs from "../tab";
-import CardInfo from "../card/card_info";
-import CardPhotos from "../card/card_photos";
+import ElementsGrouping from "@components/element_grouping";
+import Images from "@components/image";
+import Ellipse from "@components/ellipse";
+import Tabs from "@components/tab";
+import CardInfo from "@components/card/card_info";
+import CardPhotos from "@components/card/card_photos";
 
 const ProfileDetail = (props) => {
     const [selectedCard, setSelectedCard] = useState('Info'),

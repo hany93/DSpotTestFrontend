@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonClose from "../button/button_close";
+import ButtonClose from "@components/button/button_close";
 
 const Modal = () => {
     return (

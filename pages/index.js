@@ -1,7 +1,7 @@
-import List from '../components/profile_list'
-import TitleProfileList from "../components/utils/title_profile_list"
+import List from '@components/profile_list'
+import TitleProfileList from "@components/utils/title_profile_list"
 
-import { getAllProfiles } from "../api"
+import { getAllProfiles } from "@api"
 
 const Home = ({ profiles }) => {
   return (

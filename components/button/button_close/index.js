@@ -1,6 +1,6 @@
 import React from "react";
-import Images from "../../image";
-import close from '../../../public/images/close.png'
+import Images from "@components/image";
+import close from '@public/images/close.png'
 
 const ButtonBack = () => {
     const closeModal = () => {

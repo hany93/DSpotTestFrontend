@@ -1,9 +1,9 @@
-import ButtonBack from "../../components/button/button_back";
-import Modal from "../../components/modal";
-import ProfileDetail from "../../components/profile_detail";
+import ButtonBack from "@components/button/button_back";
+import Modal from "@components/modal";
+import ProfileDetail from "@components/profile_detail";
 import {
     getProfileById
-} from "../../api";
+} from "@api";
 
 const ProfilesDetails = ({ profile }) => {
     return (
