@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
-import CardInfo from "../../components/card_info/card_info";
-import CardPhotos from "../../components/card_photos";
-import ButtonBack from "../../components/button_back";
+import CardInfo from "../../components/card/card_info";
+import CardPhotos from "../../components/card/card_photos";
+import ButtonBack from "../../components/button/button_back";
 import Modal from "../../components/modal";
-import InfoPhotoProfileDetail from "../../components/infophoto_profile_detail/infophoto_profile_detail";
-import Tabs from "../../components/tabs";
+import ProfileDetail from "../../components/profile_detail";
+import Tabs from "../../components/tab";
 import { useRouter } from 'next/router';
 import {
     getProfileById
-} from "../api/profiles";
+} from "../../api";
 
-const ProfilesDetails = (props) => {
+const ProfilesDetails = () => {
     const [selectedCard, setSelectedCard] = useState('Info'),
         { query } = useRouter(),
-        [profile, setProfile] = useState({}),
+        [profile, setProfile] = useState(query),
         openModal = (image) => {
             //Disable Scroll
             document.body.style.overflow = "hidden";
@@ -29,33 +29,34 @@ const ProfilesDetails = (props) => {
         handleCard = () => {
             switch (selectedCard) {
                 case 'Info':
-                    return <CardInfo profile={profile}/>;
+                    return <CardInfo profile={profile} />;
                 case 'Photos':
-                    return <CardPhotos openModal={openModal} profile={profile}/>;
+                    return <CardPhotos openModal={openModal} profile={profile} />;
 
                 default:
                     break;
             }
         },
         getProfileDetails = async () => {
-            let profile = {}
-            if (query) {
-                profile = query;
-                setProfile(query);
-            } else {
-                var aux = await getProfileById(query.id);
-                setProfile(aux["data"]);
-            }
+            let aux = await getProfileById(query.id);
+            setProfile(aux["data"]);
+            if (typeof window !== 'undefined')
+                localStorage.setItem('profile', JSON.stringify(query));
         };
 
+
+        
     useEffect(() => {
         getProfileDetails();
     }, []);
+
+
+
     return (
         <section className="profiles_details">
             <ButtonBack />
             <div className="profiles_details__centercontainer">
-                <InfoPhotoProfileDetail profile={profile} />
+                <ProfileDetail profile={profile} />
                 <div className="profiles_details__tab">
                     <Tabs selectedCard={selectedCard} setSelectedCard={setSelectedCard} />
                     {handleCard()}

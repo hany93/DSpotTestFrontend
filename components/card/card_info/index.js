@@ -1,8 +1,8 @@
 import React from "react";
-import BasicInfo from "./basic_info";
-import Label from "./label";
-import Line from "./line";
-import Text from "./text";
+import BasicInfo from "../../utils/basic_info";
+import Label from "../../utils/label";
+import Line from "../../utils/line";
+import Text from "../../utils/text";
 
 const CardInfo = (props) => {
     return (
