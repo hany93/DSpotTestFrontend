@@ -1,7 +1,10 @@
 import React from 'react'
+import Image from 'next/image'
 
-export default function Image(props) {
+const Images = (props) => {
     return (
-        <img src={props.photo} className={props.class_image ? props.class_image : ''} />
+        <Image alt="Photo" src={props.photo} className={props.class_image ? props.class_image : ''} width={props.width && props.width} height={props.height && props.height} />
     )
 }
+
+export default Images;

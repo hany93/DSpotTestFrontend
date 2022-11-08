@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import { Inter } from '@next/font/google'
 const inter = Inter({
-  weight: ['400','700','500'],
+  weight: ['400', '700', '500'],
   subsets: ['latin']
 })
 

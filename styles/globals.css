@@ -270,6 +270,15 @@ body {
     background: #2E57FA;
     border: 1px solid #0637F9;
     border-radius: 4px;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    transition: all 1s ease;
+}
+
+.profileslist__button>a {
     color: #FFFFFF;
 
     font-family: 'Inter';
@@ -277,12 +286,7 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-
-    box-sizing: border-box;
-
-    cursor: pointer;
-
-    transition: all 1s ease;
+    text-decoration: none;
 }
 
 /*Button 'Details' hover*/
@@ -300,6 +304,7 @@ body {
 /*Scroll bar appearance*/
 .profileslist__list::-webkit-scrollbar {
     -webkit-appearance: none;
+    appearance: none;
 }
 
 /*Vertical scroll bar width*/
@@ -545,7 +550,7 @@ body {
 
     font-family: 'Inter';
     font-style: normal;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     color: #5C5F6B;
@@ -602,6 +607,7 @@ body {
 /*Scroll bar appearance*/
 .profiles_details_info__card::-webkit-scrollbar {
     -webkit-appearance: none;
+    appearance: none;
 }
 
 /*Vertical scroll bar width*/
@@ -742,6 +748,7 @@ body {
 /*Scroll bar appearance*/
 .profiles_details_photos__card::-webkit-scrollbar {
     -webkit-appearance: none;
+    appearance: none;
 }
 
 /*Vertical scroll bar width*/

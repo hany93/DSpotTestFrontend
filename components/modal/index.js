@@ -1,17 +1,10 @@
 import React from "react";
+import ButtonClose from "../button/button_close";
 
 const Modal = () => {
-    const closeModal = () => {
-        //Enable Scroll
-        document.body.style.overflow = "auto";
-
-        // Get the modal
-        let modal = document.getElementById("myModal");
-        modal.style.display = "none";
-    };
     return (
         <div id="myModal" className="modal">
-            <span className="close" onClick={() => closeModal()}><img src="images/close.png" /></span>
+            <ButtonClose/>
             <img className="modal-content" id="img01" />
         </div>
     );

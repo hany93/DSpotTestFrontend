@@ -3,7 +3,7 @@ import TitleProfileList from "../components/utils/title_profile_list"
 
 import { getAllProfiles } from "../api"
 
-export default function Home({ profiles }) {
+const Home = ({ profiles }) => {
   return (
     <section className="profileslist">
       <div className="profileslist__centercontainer">
@@ -27,3 +27,5 @@ export const getServerSideProps = async (ctx) => {
     }
   }
 }
+
+export default Home;

@@ -5,7 +5,6 @@ const ExAPI = "http://localhost:8000";
 /**Profiles**/
 
 const getAllProfiles = () => {
-  console.log('si');
   return axios.get(`${ExAPI}/profiles/profiles/`);
 };
 

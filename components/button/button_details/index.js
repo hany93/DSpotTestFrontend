@@ -1,16 +1,9 @@
 import React from "react";
-import { useRouter } from "next/router";
+import Link from "next/link";
 
 const ButtonDetails = (props) => {
-    const router = useRouter(),
-        goDetails = () => {
-            router.push({
-                pathname: '/profiles_details',
-                query: props.profile
-            }, '/profiles_details');
-        };
     return (
-        <button onClick={() => goDetails()} className="profileslist__button">Details</button>
+        <button className="profileslist__button"><Link href={'/profiles_details/' + props.profile.id}>Details</Link></button>
     );
 };
 

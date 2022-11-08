@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ElementsGrouping(props) {
+const ElementsGrouping = (props) => {
     return (
         <div className={props.class_elementsgrouping}>
             <span>{props.name}</span>
@@ -10,3 +10,5 @@ export default function ElementsGrouping(props) {
         </div>
     )
 }
+
+export default ElementsGrouping;
