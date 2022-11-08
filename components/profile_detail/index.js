@@ -1,3 +1,4 @@
+/**Imports */
 import React, { useState } from "react";
 import ElementsGrouping from "@components/element_grouping";
 import Images from "@components/image";
@@ -13,10 +14,10 @@ const ProfileDetail = (props) => {
             document.body.style.overflow = "hidden";
 
             // Get the modal
-            let modal = document.getElementById("myModal");
+            let modal = document.getElementById("modal_image");
 
             // Get the image and insert it inside the modal
-            let modalImg = document.getElementById("img01");
+            let modalImg = document.getElementById("img_enlarged");
             modal.style.display = "flex";
             modalImg.src = image;
         },

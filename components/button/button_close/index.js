@@ -8,7 +8,7 @@ const ButtonBack = () => {
         document.body.style.overflow = "auto";
 
         // Get the modal
-        let modal = document.getElementById("myModal");
+        let modal = document.getElementById("modal_image");
         modal.style.display = "none";
     };
     return (

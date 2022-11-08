@@ -1,9 +1,11 @@
+/**Imports */
 import React from "react";
 import Label from "./label";
 import Text from "./text";
 
 const BasicInfo = (props) => {
     return (
+        // Basic information about the selected profile
         <div className="profiles_details_info__card__basicInfo">
             <div>
                 <Label name='Address' />
