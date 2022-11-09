@@ -1,22 +1,13 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@components/*": [
-        "components/*"
-      ],
-      "@api": [
-        "api/"
-      ],
-      "@public/*": [
-        "public/*"
-      ],
-      "@styles/*": [
-        "styles/*"
-      ],
-      "@hook/*": [
-        "hook/*"
-      ]
-    }
-  }
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			/**Path Alias*/
+			"@components/*": ["components/*"],
+			"@api": ["api/"],
+			"@public/*": ["public/*"],
+			"@styles/*": ["styles/*"],
+			"@hook/*": ["hook/*"]
+		}
+	}
 }
