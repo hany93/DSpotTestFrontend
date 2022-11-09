@@ -1,31 +1,23 @@
 /**Imports */
-import React, { useState } from "react";
+import React from "react";
 import ElementsGrouping from "@components/element_grouping";
 import Images from "@components/image";
 import Ellipse from "@components/ellipse";
 import Tabs from "@components/tab";
+import useProfileDetails from "@hook/useProfileDetails";
 import CardInfo from "@components/card/card_info";
 import CardPhotos from "@components/card/card_photos";
 
 const ProfileDetail = (props) => {
-    const [selectedCard, setSelectedCard] = useState('Info'),
-        openModal = (image) => {
-            //Disable Scroll
-            document.body.style.overflow = "hidden";
-
-            // Get the modal
-            let modal = document.getElementById("modal_image");
-
-            // Get the image and insert it inside the modal
-            let modalImg = document.getElementById("img_enlarged");
-            modal.style.display = "flex";
-            modalImg.src = image;
-        },
+    const { selectedCard, setSelectedCard, openModal } = useProfileDetails(),
+        /**Method to display info cards and photos  */
         handleCard = () => {
             switch (selectedCard) {
                 case 'Info':
+                    /**Info card */
                     return <CardInfo profile={props.profile} />;
                 case 'Photos':
+                    /**Photos card */
                     return <CardPhotos openModal={openModal} profile={props.profile} />;
 
                 default:
@@ -33,6 +25,7 @@ const ProfileDetail = (props) => {
             }
         };
     return (
+        /**Component to show profile details */
         <>
             <div className="profiles_details__infoavatar">
                 <div>

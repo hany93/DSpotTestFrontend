@@ -1,17 +1,13 @@
+/**Imports */
 import React from "react";
 import Images from "@components/image";
 import close from '@public/images/close.png'
+import useButtonClose from "@hook/useButtonClose";
 
 const ButtonBack = () => {
-    const closeModal = () => {
-        //Enable Scroll
-        document.body.style.overflow = "auto";
-
-        // Get the modal
-        let modal = document.getElementById("modal_image");
-        modal.style.display = "none";
-    };
+    const { closeModal } = useButtonClose();
     return (
+        /**Component to show button close modal */
         <span className="close" onClick={() => closeModal()}><Images photo={close} /></span>
     );
 };

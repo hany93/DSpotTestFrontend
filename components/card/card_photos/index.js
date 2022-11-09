@@ -1,8 +1,10 @@
+/**Imports */
 import React from "react";
 import Images from "@components/image";
 
 const CardPhotos = (props) => {
     return (
+        /**Component to show photos card */
         <div id='profiles_details_photos__card' className="profiles_details_photos__card">
             {props.profile.profilephotos.map((item, index) => {
                 return (

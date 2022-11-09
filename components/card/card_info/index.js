@@ -1,3 +1,4 @@
+/**Imports */
 import React from "react";
 import BasicInfo from "@components/utils/basic_info";
 import Label from "@components/utils/label";
@@ -6,6 +7,7 @@ import Text from "@components/utils/text";
 
 const CardInfo = (props) => {
     return (
+        /**Component to show information card */
         <div id='profiles_details_info__card' className="profiles_details_info__card">
             <div>
                 <Label name='Bio' />
@@ -17,7 +19,7 @@ const CardInfo = (props) => {
                 <Text name={props.profile.phone} />
             </div>
             <Line />
-            <BasicInfo profile={props.profile}/>
+            <BasicInfo profile={props.profile} />
         </div>
     );
 };
