@@ -1,9 +1,22 @@
+import '@testing-library/jest-dom'
 import ButtonClose from '@components/button/button_close'
 import { render, screen } from '@testing-library/react'
 
 describe('ButtonClose Component', () => {
-	it('Render button close', () => {
+	beforeEach(() => {
 		render(<ButtonClose />)
-		expect(screen.getByRole('link').getAttribute('href')).toBe('/')
+	})
+
+	it('Test role img', () => {
+		expect(screen.getByRole('img')).toBeInTheDocument()
+	})
+
+	it('Test className close', () => {
+		expect(document.querySelector('div .close')).toBeInTheDocument()
+	})
+
+	it('Test Snapshot', () => {
+		var { container } = render(<ButtonClose />)
+		expect(container).toMatchSnapshot()
 	})
 })
