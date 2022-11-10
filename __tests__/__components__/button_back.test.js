@@ -20,9 +20,4 @@ describe('Render ButtonBack Component', () => {
 			document.querySelector('div .profiles_details__back')
 		).toBeInTheDocument()
 	})
-
-	it('Test Snapshot', () => {
-		var { container } = render(<ButtonBack />)
-		expect(container).toMatchSnapshot()
-	})
 })

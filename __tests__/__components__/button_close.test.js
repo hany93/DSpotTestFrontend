@@ -14,9 +14,4 @@ describe('ButtonClose Component', () => {
 	it('Test className close', () => {
 		expect(document.querySelector('div .close')).toBeInTheDocument()
 	})
-
-	it('Test Snapshot', () => {
-		var { container } = render(<ButtonClose />)
-		expect(container).toMatchSnapshot()
-	})
 })

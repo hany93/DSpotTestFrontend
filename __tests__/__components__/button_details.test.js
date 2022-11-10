@@ -20,9 +20,4 @@ describe('ButtonDetails Component', () => {
 			document.querySelector('div .profileslist__button')
 		).toBeInTheDocument()
 	})
-
-	it('Test Snapshot', () => {
-		var { container } = render(<ButtonDetails profile={profile_id} />)
-		expect(container).toMatchSnapshot()
-	})
 })
