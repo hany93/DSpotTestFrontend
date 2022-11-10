@@ -6,14 +6,14 @@ const Tabs = (props) => {
 		/**Component to show Tabs*/
 		<ul>
 			<li
-				onClick={() => props.setSelectedCard('Info')}
-				className={props.selectedCard === 'Info' ? 'active' : ''}
+				onClick={() => props.setSelectedCard(0)}
+				className={props.selectedCard === 0 ? 'active' : ''}
 			>
 				Info
 			</li>
 			<li
-				onClick={() => props.setSelectedCard('Photos')}
-				className={props.selectedCard === 'Photos' ? 'active' : ''}
+				onClick={() => props.setSelectedCard(1)}
+				className={props.selectedCard === 1 ? 'active' : ''}
 			>
 				Photos
 			</li>

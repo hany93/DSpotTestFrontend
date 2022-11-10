@@ -1,6 +1,6 @@
 /**Imports */
-import List from '@components/profile_list'
-import TitleProfileList from '@components/utils/title_profile_list'
+import List from '@components/profile_list_content'
+import Text from '@components/text'
 
 /**Import method from api to obtain profiles */
 import { getAllProfiles } from '@api'
@@ -9,7 +9,10 @@ const Home = ({ profiles }) => {
 	return (
 		<section className='profileslist'>
 			<div className='profileslist__centercontainer'>
-				<TitleProfileList />
+				{/**Title*/}
+				<div className='profileslist__title'>
+					<Text text='Friends' />
+				</div>
 				{profiles ? (
 					/**Profiles List */
 					<List profiles={profiles} />

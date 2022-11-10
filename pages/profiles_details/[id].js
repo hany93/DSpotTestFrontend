@@ -1,7 +1,7 @@
 /**Imports */
 import ButtonBack from '@components/button/button_back'
 import Modal from '@components/modal'
-import ProfileDetail from '@components/profile_detail'
+import ProfileDetail from '@components/profile_detail_content'
 
 /**Import method from api to obtain selected profile */
 import { getProfileById } from '@api'

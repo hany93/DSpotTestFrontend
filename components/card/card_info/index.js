@@ -1,29 +1,35 @@
 /**Imports */
 import React from 'react'
-import BasicInfo from '@components/utils/basic_info'
-import Label from '@components/utils/label'
-import Line from '@components/utils/line'
-import Text from '@components/utils/text'
+import BasicInfo from '@components/basic_info'
+import Text from '@components/text'
 
 const CardInfo = (props) => {
 	return (
 		/**Component to show information card */
-		<div
-			id='profiles_details_info__card'
-			className='profiles_details_info__card'
-		>
+		<>
 			<div>
-				<Label name='Bio' />
-				<Text name={props.profile.bio} />
+				<Text class_textSpan='profiles_details_info__card__label' text='Bio:' />
+				<Text
+					class_textSpan='profiles_details_info__card__text'
+					text={props.profile.bio}
+				/>
 			</div>
-			<Line />
+			{/**Component to show line*/}
+			<Text class_textSpan='profiles_details_info__card__line' />
 			<div>
-				<Label name='Phone' />
-				<Text name={props.profile.phone} />
+				<Text
+					class_textSpan='profiles_details_info__card__label'
+					text='Phone:'
+				/>
+				<Text
+					class_textSpan='profiles_details_info__card__text'
+					text={props.profile.phone}
+				/>
 			</div>
-			<Line />
+			{/**Component to show line*/}
+			<Text class_textSpan='profiles_details_info__card__line' />
 			<BasicInfo profile={props.profile} />
-		</div>
+		</>
 	)
 }
 

@@ -5,25 +5,10 @@ import Images from '@components/image'
 import Ellipse from '@components/ellipse'
 import Tabs from '@components/tab'
 import useProfileDetails from '@hook/useProfileDetails'
-import CardInfo from '@components/card/card_info'
-import CardPhotos from '@components/card/card_photos'
+import Card from '@components/card'
 
 const ProfileDetail = (props) => {
-	const { selectedCard, setSelectedCard, openModal } = useProfileDetails(),
-		/**Method to display info cards and photos  */
-		handleCard = () => {
-			switch (selectedCard) {
-				case 'Info':
-					/**Info card */
-					return <CardInfo profile={props.profile} />
-				case 'Photos':
-					/**Photos card */
-					return <CardPhotos openModal={openModal} profile={props.profile} />
-
-				default:
-					break
-			}
-		}
+	const { selectedCard, setSelectedCard, openModal } = useProfileDetails()
 	return (
 		/**Component to show profile details */
 		<>
@@ -51,7 +36,11 @@ const ProfileDetail = (props) => {
 			</div>
 			<div className='profiles_details__tab'>
 				<Tabs selectedCard={selectedCard} setSelectedCard={setSelectedCard} />
-				{handleCard()}
+				<Card
+					selectedCard={selectedCard}
+					profile={props.profile}
+					openModal={openModal}
+				/>
 			</div>
 		</>
 	)

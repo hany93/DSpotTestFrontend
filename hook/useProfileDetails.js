@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const useProfileDetails = () => {
-	const [selectedCard, setSelectedCard] = useState('Info'),
+	const [selectedCard, setSelectedCard] = useState(0),
 		/**Method to open modal */
 		openModal = (image) => {
 			/**Disable Scroll*/
