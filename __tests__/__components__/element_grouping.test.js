@@ -2,8 +2,6 @@ import '@testing-library/jest-dom'
 import ElementsGrouping from '@components/element_grouping'
 import { render, screen } from '@testing-library/react'
 
-const openModal = jest.fn()
-
 describe('Render CardInfo Component', () => {
 	beforeEach(() => {
 		render(
